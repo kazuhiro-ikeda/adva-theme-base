@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+$main-blue: #639ff8;
+$main-gray: #eff0f2;
+$main-bluegray: #56626e;
+$main-red: #d71f1c;
+
+$pc: 751px; // PC
+$sp: 750px; // スマホ
+
+$en: "Sarabun", sans-serif;
+$min: "EB Garamond", serif;
+
+$viewport: 750px;
+
+@mixin pc {
+	@media (min-width: $pc) {
+		@content;
+	}
+}
+
+@mixin sp {
+	@media (max-width: $sp) {
+		@content;
+	}
+}
+
+//margin
+@mixin last-mb0() {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin btn($seconds: 0.3s, $opacity: 0.5) {
+	transition: all $seconds;
+
+	&:hover {
+		opacity: $opacity;
+
+		@media (max-width: $viewport) {
+			opacity: 1;
+		}
+	}
+}

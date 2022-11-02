@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+.logged-in header.normal {
+	top: 32px;
+}
+
+#wp-admin-bar-customize,
+#wp-admin-bar-duplicate-post {
+	display: none !important;
+}
+
+//header
+header.normal {
+	width: 100%;
+	height: 120px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30000;
+	background: transparent;
+	transition: background .5s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 980px;
+
+	@media (max-width: $viewport) {
+		display: none;
+	}
+
+	&.fixed {
+		background: white;
+
+		.logo {
+			color: $cc;
+		}
+
+		#global {
+			.global-items {
+				li {
+					a {
+						color: $cc;
+					}
+				}
+			}
+		}
+	}
+
+	.logo {}
+
+	#global {}
+}

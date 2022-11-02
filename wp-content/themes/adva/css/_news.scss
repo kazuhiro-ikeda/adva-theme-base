@@ -1,0 +1,221 @@
+@charset "utf-8";
+//news
+
+#single_news {
+    padding: 90px 0 120px;
+
+    @media (max-width: $viewport) {
+        padding: 15vw 0 15vw;
+    }
+
+    .inner {
+        width: 980px;
+        margin: 0 auto 60px;
+
+        @media (max-width: $viewport) {
+            width: 88vw;
+            margin: 0 auto 10vw;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+        padding: 0 0 10px;
+        border-bottom: 1px solid $base;
+        margin: 0 0 30px;
+
+        @media (max-width: $viewport) {
+            font-size: 4.8vw;
+            padding: 0 0 2vw;
+            margin: 0 0 4vw;
+        }
+    }
+}
+
+#archive_news {
+    padding: 90px 0 120px;
+
+    @media (max-width: $viewport) {
+        padding: 15vw 0 15vw;
+    }
+
+    .inner {
+        width: 980px;
+        margin: 0 auto 60px;
+
+        @media (max-width: $viewport) {
+            width: 88vw;
+            margin: 0 auto 10vw;
+        }
+
+        .box {
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 1.5;
+                margin: 0 0 20px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+        }
+    }
+ }
+
+.information {
+    margin: 0 0 20px;
+
+    .label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        color: white;
+        background: #000;
+        height: 27px;
+        padding: 0 16px;
+        margin: 0 0 10px;
+
+        @media all and (-ms-high-contrast: none) {
+            padding: 6px 16px 0;
+        }
+
+        @media (max-width: $viewport) {
+            height: 6vw;
+            font-size: 3.3vw;
+            margin: 0 0 2vw;
+        }
+    }
+
+    .date {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+
+        @media (max-width: $viewport) {
+            font-size: 4vw;
+        }
+    }
+
+    #archive_news & {
+        display: flex;
+        display: -ms-flex;
+        align-items: center;
+
+        @media (max-width: $viewport) {
+            display: block;
+        }
+
+        .date {
+            margin: 0 10px 0 0;
+            position: relative;
+            top: -6px;
+        }
+    }
+}
+
+.post_links {
+    width: 740px;
+    margin: 0 auto;
+    position: relative;
+
+
+    @media (max-width: $viewport) {
+        width: 80vw;
+    }
+
+    a {
+        display: block;
+        transition: all .5s;
+
+        &:hover {
+            opacity: .5;
+
+            @media screen and (max-width: $viewport) {
+                opacity: 1;
+            }
+        }
+    }
+
+    a:not(.more) {
+        display: inline-block;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        min-height: 24px;
+        font-size: 18px;
+        border-bottom: 1px solid #000;
+        position: absolute;
+        top: 10px;
+
+        @media (max-width: $viewport) {
+            background-size: 4vw;
+            background-repeat: no-repeat;
+            min-height: 4vw;
+            font-size: 4vw;
+            top: 0;
+        }
+    }
+
+    a[rel="prev"] {
+        background-image: url("../images/news/arrow_preview.png");
+        background-position: left top;
+        padding: 2px 0 5px 34px;
+        left: 0;
+
+        @media (max-width: $viewport) {
+            padding: 0 0 2vw 6vw;
+        }
+    }
+
+    a[rel="next"] {
+        background-image: url("../images/news/arrow_next.png");
+        background-position: right top;
+        padding: 2px 34px 5px 0;
+        right: 0;
+
+        @media (max-width: $viewport) {
+            padding: 0 6vw 2vw 0;
+        }
+    }
+
+    a.more {
+        display: block;
+        width: 220px;
+        border: 1px solid #000;
+        font-family: $yugothic;
+        font-size: 18px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px 0 20px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        transition: opacity .3s;
+
+        @media all and (-ms-high-contrast: none) {
+            padding: 16px 20px 10px;
+        }
+
+        @media (max-width: $viewport) {
+            width: 44vw;
+            font-size: 3.8vw;
+            padding: 4vw 0 4vw;
+            top: 13vw;
+        }
+
+        &:hover {
+            opacity: .6;
+
+            @media (max-width: $viewport) {
+                opacity: 1;
+            }
+        }
+    }
+}

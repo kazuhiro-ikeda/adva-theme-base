@@ -1,0 +1,71 @@
+//heading-01
+.heading-01 {
+	&--center {
+		text-align: center;
+	}
+	&--flex {
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+
+		.heading-01__en {
+			margin-right: 20px;
+			padding-bottom: 0;
+		}
+
+		.heading-01__ja {
+			padding-top: 20px;
+		}
+	}
+}
+
+.heading-01__en {
+	font-size: 74px;
+	line-height: 1;
+	color: $main-bluegray;
+	padding-bottom: 15px;
+
+	@include sp {
+		font-size: 14.6vw;
+		padding-bottom: 4vw;
+	}
+}
+
+.heading-01__ja {
+	font-size: 16px;
+	line-height: 1;
+	color: $main-bluegray;
+
+	@include sp {
+		font-size: 3.8vw;
+	}
+}
+
+//heading-02
+.heading-02 {
+	&--center {
+		text-align: center;
+	}
+}
+
+.heading-02__ja {
+	font-size: 24px;
+	line-height: 1;
+	color: $main-bluegray;
+	padding-bottom: 8px;
+
+	@include sp {
+		font-size: 6vw;
+		padding-bottom: 2vw;
+	}
+}
+
+.heading-02__en {
+	font-size: 14px;
+	line-height: 1;
+	color: $main-bluegray;
+
+	@include sp {
+		font-size: 3.3vw;
+	}
+}

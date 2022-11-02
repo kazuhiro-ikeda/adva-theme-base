@@ -1,0 +1,386 @@
+@charset "utf-8";
+//blog
+.blog_wrap {
+	background-image: url("../images/blog/dots.png");
+	background-size: 8px;
+	padding: 60px 0 120px;
+
+	@media (max-width: $viewport) {
+		padding: 15vw 0 20vw;
+	}
+}
+
+//archive
+.archive_blog {
+	overflow: hidden;
+	
+	@media (max-width: $viewport) {
+		width: 76vw;
+		margin: 0 auto;
+	}
+	
+	li {
+		width: 275px;
+		margin-bottom: 50px;
+		
+		@media (max-width: $viewport) {
+			width: 100%;
+			margin-bottom: 3vw;
+		}
+		
+		&:nth-child(odd) {
+			float: left;
+			
+			@media (max-width: $viewport) {
+				float: none;
+			}
+		}
+		
+		&:nth-child(even) {
+			float: right;
+			
+			@media (max-width: $viewport) {
+				float: none;
+			}
+		}
+
+		a {
+			display: block;
+		}
+		
+		figure {
+			margin: 0 0 10px;
+			text-align: center;
+			
+			@media (max-width: $viewport) {
+				margin: 0 0 3vw;
+			}
+			
+			img {
+				width: auto;
+				height: 180px;
+				
+				@media screen and (max-width: $viewport) {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		.info {
+			margin-bottom: 10px !important;
+			
+			@media (max-width: $viewport) {
+				margin-bottom: 2vw;
+			}
+
+			.date {
+				width: 90px;
+				display: inline-block;
+				line-height: 1.5;
+				color: #333;
+				position: relative;
+				top: -7px;
+
+				@media (max-width: $viewport) {
+					width: 20vw;
+					top: -1.5vw;
+				}
+			}
+
+			.label {
+				display: inline-block;
+				line-height: 1.5;
+				color: $navy;
+				font-size: 13px;
+				background: #e7e9f3;
+				box-sizing: border-box;
+				padding: 2px 10px;
+				max-width: calc(100% - 100px);
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+
+				@media all and (-ms-high-contrast: none){
+					padding: 8px 10px 2px;
+				}
+
+				@media (max-width: $viewport) {
+					font-size: 3.4vw;
+					max-width: calc(100% - 22vw);
+				}
+			}
+		}
+		
+		.ttl_name {
+			font-size: 14px !important;
+			font-weight: bold;
+			line-height: 1.5;
+			overflow: hidden;
+			display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    -webkit-line-clamp: 2;
+		    text-decoration: underline;
+		    
+		    @media all and (-ms-high-contrast: none){
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+		    }
+		}
+	}
+}
+
+.post_links {
+	width: 100%;
+	border-top: dotted 2px #c0c0c0;
+	margin: 20px 0 0;
+	padding: 20px 0;
+	position: relative;
+	min-height: 50px;
+
+
+	@media (max-width: $viewport) {
+		padding: 10vw 0 10vw;
+		min-height: 10vw;
+	}
+
+	a {
+		display: block;
+		transition: all .5s;
+
+		&:hover {
+			opacity: .5;
+
+			@media screen and (max-width: $viewport) {
+				opacity: 1;
+			}
+		}
+	}
+
+	a[rel="prev"] {
+		display: block;
+		width: 140px;
+		height: 40px;
+		background-image: url(../images/blog/btn_preview.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: left top;
+		text-indent: -9999px;
+		position: absolute;
+		left: 0;
+		top: 40px;
+
+		@media (max-width: $viewport) {
+			width: 36vw;
+			height: 12vw;
+		}
+	}
+
+	a[rel="next"] {
+		display: block;
+		width: 140px;
+		height: 40px;
+		background-image: url(../images/blog/btn_next.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: left top;
+		text-indent: -9999px;
+		position: absolute;
+		right: 0;
+		top: 40px;
+
+		@media (max-width: $viewport) {
+			width: 36vw;
+			height: 12vw;
+		}
+	}
+
+	a.more {
+		display: block;
+		width: 140px;
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		top: 52px;
+		color: $navy;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1.5;
+		text-decoration: underline;
+		text-align: center;
+
+		@media (max-width: $viewport) {
+			width: 100%;
+			top: initial;
+			bottom: 0;
+			font-size: 3.4vw;
+		}
+	}
+}
+
+.inner_blog {
+	width: 980px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 50px;
+	background: white;
+	display: flex;
+	display: -ms-flex;
+	justify-content: space-between;
+
+	@media (max-width: $viewport) {
+		width: 88vw;
+		padding: 10vw 6vw;
+		display: block;
+		justify-content: initial;
+	}
+
+	a.page-numbers {
+		background-color: $navy;
+	}
+
+	.nav-links .current {
+		color: $navy;
+	}
+
+	.page-numbers.current {
+		color: $navy;
+	}
+	
+	.inner_left {
+		width: 600px;
+
+		@media (max-width: $viewport) {
+			width: 100%;
+			margin: 0 0 15vw;
+		}
+
+		.info {
+			margin-bottom: 30px;
+
+			@media (max-width: $viewport) {
+				margin: 0 0 3vw;
+			}
+
+			.date {
+				width: 80px;
+				display: inline-block;
+				line-height: 1.5;
+				color: #333;
+				position: relative;
+				top: -7px;
+
+				@media (max-width: $viewport) {
+					width: 20vw;
+					top: -1.5vw;
+				}
+			}
+
+			.label {
+				display: inline-block;
+				line-height: 1.5;
+				color: $navy;
+				font-size: 13px;
+				background: #e7e9f3;
+				box-sizing: border-box;
+				padding: 2px 10px;
+				max-width: calc(100% - 100px);
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+
+				@media all and (-ms-high-contrast: none){
+					padding: 8px 10px 2px;
+				}
+
+				@media (max-width: $viewport) {
+					font-size: 3.4vw;
+					max-width: calc(100% - 22vw);
+				}
+			}
+		}
+
+		.ttl_name {
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 1.5;
+			margin: 0 0 40px;
+
+			@media (max-width: $viewport) {
+				font-size: 4vw;
+				margin: 0 0 5vw;
+			}
+		}
+	}
+	
+	.inner_right {
+		width: 230px;
+
+		@media (max-width: $viewport) {
+			width: 100%;
+			width: 88%;
+			margin: 0 auto;
+		}
+		
+		.ttl_category {
+			background: $navy;
+			color: white;
+			font-family: $mon;
+			font-weight: 600;
+			font-size: 22px;
+			text-align: center;
+			line-height: 1.5;
+			letter-spacing: 2px;
+			padding: 10px;
+			margin-bottom: 10px;
+
+			@media (max-width: $viewport) {
+				font-size: 4vw;
+				padding: 2vw;
+				margin: 0 0 3vw;
+			}
+		}
+		
+		ul {
+			margin-bottom: 50px;
+
+
+			@media (max-width: $viewport) {
+				margin: 0 0 5vw;
+			}
+			
+			> li {
+				background-image: url(../images/blog/border.png);
+				background-size: 5px;
+				background-repeat: repeat-x;
+				background-position: left bottom;
+				
+				> a {
+					display: block;
+					color: $navy;
+					font-weight: bold;
+					padding: 20px 0;
+					transition: all .5s;
+
+					@media (max-width: $viewport) {
+						padding: 4vw 0;
+					}
+					
+					&::before {
+						content: "・";
+					}
+					
+					&:hover {
+						opacity: .5;
+						
+						@media screen and (max-width: $viewport) {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

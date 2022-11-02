@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*	nav
+---------------------------------*/
+
+//toggle
+.btn_toggle {
+	width: 9vw;
+	padding: 2vw 2vw 1.8vw;
+	background: $toggle;
+	
+	.text {
+		font-family: $roboto;
+		color: $toggle;
+		font-size: 2.7vw;
+		line-height: 1;
+		text-align: center;
+		margin-top: 1vw;
+	}
+}
+
+.toggle, .toggle span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.toggle {
+	position: relative;
+	width: 9vw;
+	height: 6vw;
+}
+
+.toggle span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: $toggle;
+	
+	.page-home & {
+		background-color: $toggle;
+	}
+}
+
+.toggle span:nth-of-type(1) {
+	top: 0;
+}
+
+.toggle span:nth-of-type(2) {
+	top: 2.8vw;
+}
+
+.toggle span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.toggle {
+	-webkit-animation: menu-close .6s;
+	animation: menu-close .6s;
+}
+
+.toggle.active {
+	-webkit-animation: menu-open .6s;
+	animation: menu-open .6s;
+}
+
+@-webkit-keyframes menu-close {
+	30% {
+		-webkit-transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes menu-close {
+	30% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes menu-open {
+	30% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes menu-open {
+	30% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.toggle.active span:nth-of-type(1) {
+	-webkit-transform: translateY(2.7vw) rotate(-45deg);
+	transform: translateY(2.7vw) rotate(-45deg);
+}
+
+.toggle.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.toggle.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-2.7vw) rotate(45deg);
+	transform: translateY(-2.7vw) rotate(45deg);
+}

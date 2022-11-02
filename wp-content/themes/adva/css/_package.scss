@@ -1,0 +1,679 @@
+@charset "utf-8";
+/*	package
+---------------------------------*/
+
+//header
+header {
+	padding: 10px 0;
+	border-bottom: 1px solid silver;
+	
+	@media screen and (max-width: $viewport) {
+		padding: 3vw 0;
+	}
+}
+
+//id
+
+#id {
+	display: block;
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+	
+	.logo {
+		display: block;
+		width: 438px;
+		float: left;
+	}
+	
+	.info {
+		float: right;
+		width: 466px;
+		padding-top: 13px;
+		
+		> p {
+			font-size: 12px;
+			text-align: right;
+			padding-bottom: 7px;
+			border-bottom: 1px solid silver;
+			margin-bottom: 5px;
+		}
+		
+		.inner {
+			padding-top: 5px;
+			text-align: right;
+			
+			.tel {
+				width: 315px;
+				height: auto;
+				padding-right: 20px;
+			}
+			
+			.btn_official {
+				//#id style
+				position: relative;
+				top: -4px;
+			}
+		}//.inner
+	}//.info
+}//#id
+
+.btn_official {
+	//global style
+	background: #808080;
+	color: white;
+	font-size: 11px;
+	display: inline-block;
+	padding: 4px 7px 7px 12px;
+	opacity: 1;
+	transition: all .7s;
+	
+	> i {
+		padding-left: 1em;
+		color: #c6d800;
+		font-size: 17px;
+		position: relative;
+		top: 1px;
+	}
+	
+	&:hover {
+		opacity: .5;
+	}
+}
+
+//id_s
+
+#id_s {
+	display: none;
+	
+	@media screen and (max-width: $viewport) {
+		display: block;
+		width: 94vw;
+		margin: 0 auto;
+		overflow: hidden;
+		
+		.logo {
+			display: block;
+			width: 80vw;
+			float: left;
+		}
+	}
+}
+
+//pagetop
+
+#pagetop {
+	width: 980px;
+	margin: 120px auto 0;
+	overflow: hidden;
+	
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+	
+	> a {
+		color: white;
+		font-size: 30px;
+		display: block;
+		float: right;
+		width: 34px;
+		text-align: center;
+		background: #999999;
+		padding-bottom: 5px;
+		opacity: 1;
+		transition: all .7s;
+		
+		&:hover {
+			opacity: .5;
+		}
+	}
+}
+
+//footer
+footer {
+	border-top: 1px solid silver;
+	padding: 26px 0 30px;
+	
+	@media screen and (max-width: $viewport) {
+		margin-top: 10vw;
+		padding: 5vw 0 5vw;
+	}
+}
+
+#footer_id_s {
+	display: none;
+	
+	@media screen and (max-width: $viewport) {
+		display: block;
+		width: 94vw;
+		margin: 0 auto;
+		
+		.logo {
+			display: block;
+			width: 80%;
+			margin-bottom: 3vw;
+		}
+		
+		> p {
+			line-height: 150%;
+			margin-bottom: 2vw;
+		}
+		
+		.tel {
+			display: block;
+			width: 100%;
+			margin-bottom: 5vw;
+		}
+	}
+}
+
+#footer_id {
+	background: #cccccc;
+	padding: 30px 0;
+	
+	@media screen and (max-width: $viewport) {
+		background: #cccccc;
+		padding: 5vw 0 0;
+	}
+	
+	.inner {
+		width: 980px;
+		margin: 0 auto;
+		overflow: hidden;
+		
+		@media screen and (max-width: $viewport) {
+			width: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		
+		.place {
+			float: left;
+			padding-top: 5px;
+			
+			@media screen and (max-width: $viewport) {
+				float: none;
+				padding: 2vw 2vw 5vw;
+			}
+			
+			> strong {
+				font-size: 18px;
+				padding-right: 10px;
+				letter-spacing: 2px;
+				
+				@media screen and (max-width: $viewport) {
+					display: block;
+					padding-right: 0;
+					margin-bottom: 2vw;
+				}
+			}
+			
+			> span {
+				font-size: 13px;
+				position: relative;
+				top: -2px;
+				
+				@media screen and (max-width: $viewport) {
+					display: block;
+					position: static;
+					top: 0;
+				}
+			}
+		}
+		
+		#copyright {
+			float: right;
+			font-size: 13px;
+			padding-top: 5px;
+			
+			@media screen and (max-width: $viewport) {
+				display: block;
+				float: none;
+				background: white;
+				padding: 2vw;
+			}
+		}
+	}
+}
+
+#footer_id_seal {
+	background: #cccccc;
+	padding: 10px 0;
+	
+	@media screen and (max-width: $viewport) {
+		background: #cccccc;
+		padding: 5vw 0 0;
+	}
+	
+	.inner {
+		width: 980px;
+		margin: 0 auto;
+		overflow: hidden;
+		
+		@media screen and (max-width: $viewport) {
+			width: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+		}
+		
+		.data {
+			float: left;
+			padding-top: 20px;
+			
+			@media (max-width: $viewport) {
+				float: none;
+				padding-top: 0;
+			}
+		}
+		
+		.seal {
+			width: 100px;
+			float: right;
+			
+			@media (max-width: $viewport) {
+				width: 8vw;
+				position: absolute;
+				bottom: 9vw;
+				right: 3vw;
+			}
+		}
+		
+		.place {
+			margin-bottom: 20px;
+			
+			@media all and (-ms-high-contrast: none){
+				line-height: 1.5;
+			}
+			
+			@media screen and (max-width: $viewport) {
+				float: none;
+				padding: 2vw 2vw 5vw;
+			}
+			
+			> strong {
+				font-size: 18px;
+				padding-right: 10px;
+				letter-spacing: 2px;
+				
+				@media screen and (max-width: $viewport) {
+					display: block;
+					padding-right: 0; 
+					margin-bottom: 2vw;
+				}
+			}
+			
+			> span {
+				font-size: 13px;
+				position: relative;
+				top: -2px;
+				
+				@media screen and (max-width: $viewport) {
+					display: block;
+					position: static;
+					top: 0;
+				}
+			}
+		}
+		
+		#copyright {
+			font-size: 13px;
+			
+			@media all and (-ms-high-contrast: none){
+				line-height: 1.5;
+			}
+			
+			@media screen and (max-width: $viewport) {
+				display: block;
+				float: none;
+				background: white;
+				padding: 2vw;
+			}
+		}
+	}
+}
+
+#nav_foot {
+	display: none;
+	
+	@media screen and (max-width: $viewport) {
+		display: none;
+		
+		.inner_other {
+			box-sizing: border-box;
+			position: fixed;
+			width: 100%;
+			left: 0;
+			bottom: 10vw;
+			padding: 4vw;
+			overflow: hidden;
+			
+			> a {
+				box-sizing: border-box;
+				display: block;
+				width: 12vw;
+				height: 12vw;
+				border-radius: 6vw;
+				text-align: center;
+				font-size: 5vw;
+				font-weight: bold;
+				color: white;
+				padding-top: 3vw;
+				background: $insert;
+				float: right;
+			}
+		}
+		
+		.inner_case {
+			box-sizing: border-box;
+			position: fixed;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			padding: 0;
+			overflow: hidden;
+			
+			a {
+				display: block;
+				box-sizing: border-box;
+				width: 33.33%;
+				text-align: center;
+				color: white;
+				padding: 4vw 0 3vw;
+				float: left;
+				font-weight: bold;
+				
+				i {
+					padding-right: 2vw;
+				}
+				
+				&:nth-of-type(1) {
+					background: #009fb0;
+				}
+				
+				&:nth-of-type(2) {
+					background: #1f296b;
+				}
+				
+				&:nth-of-type(3) {
+					background: #009cdd;
+				}
+			}
+		}
+	}
+}
+
+//global_s
+
+#global_s {
+	display: none;
+}
+
+//nav_s
+.nav_s {
+	li {
+		border-bottom: 1px solid silver;
+		padding: 3vw;
+		
+		> a {
+			font-size: 18px;
+			font-weight: bold;
+			
+			&::before {
+				color: $insert;
+				font-family: FontAwesome;
+				content: "\f0da";
+				padding-right: 2vw;
+			}
+		}
+		
+		&.official_s {
+			> a {
+				&::before {
+					color: $insert;
+				}
+			}
+		}
+	}
+}
+
+//contents
+#home_contents {
+	width: 980px;
+	margin: 0px auto 50px;
+	
+	@media screen and (max-width: $viewport) {
+		width: 94vw;
+		margin: 0px auto 5vw;
+	}
+	
+	.single-content {
+		p {
+			font-size: 18px;
+			//text-align: center !important;
+			
+			@media (max-width: $viewport) {
+				font-size: 3.4vw;
+				//text-align: left !important;
+			}
+		}
+		
+		ul {
+			font-size: 18px;
+			
+			@media (max-width: $viewport) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+#Glide {
+	margin-bottom: 60px;
+	
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+	
+	.glide__slide {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+#Glide_s {
+	display: none;
+	
+	@media screen and (max-width: $viewport) {
+		display: block;
+		margin-bottom: 10vw;
+	}
+	
+	.glide__slide {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+#mainvisual {
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 50px;
+	
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+	
+	> img {
+		width: 100%;
+		display: block;
+	}
+}
+
+#mainvisual_s {
+	display: none;
+	
+	@media screen and (max-width: $viewport) {
+		display: block;
+		margin-bottom: 5vw;
+	}
+	
+	> img {
+		width: 100%;
+		display: block;
+	}
+}
+
+//ttl
+.ttl_page {
+	margin-bottom: 30px;
+	
+	@media screen and (max-width: $viewport) {
+		margin-bottom: 5vw;
+	}
+}
+
+.ttl_page_sub {
+	width: 980px;
+	margin: 30px auto 30px;
+	font-size: 22px;
+	font-weight: bold;
+	
+	@media screen and (max-width: $viewport) {
+		width: 94%;
+		margin: 5vw auto 5vw;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
+
+//ttl
+.ttl_case_line {
+	width: 980px;
+	margin: 0 auto 20px;
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	position: relative;
+
+	@media screen and (max-width: $viewport) {
+		width: 100%;
+		margin: 0 auto 6vw;
+		font-size: 16px;
+		letter-spacing: 0;
+		font-weight: bold;
+		position: relative;
+	}
+
+	> span {
+		display: inline-block;
+		background: white;
+		padding-right: 5px;
+	}
+
+	&::before {
+		content: url(../images/case/dice.png);
+		padding-right: 5px;
+		position: relative;
+		top: 1px;
+	}
+
+	&.em4 {
+		&::after {
+			content: "";
+			border-top: 1px solid silver;
+			position: absolute;
+			top: 50%;
+			left: 6.3em;
+			width: calc(100% - 6.3em);
+
+			@media screen and (max-width: $viewport) {
+				left: 6.3em;
+				width: calc(100% - 6.3em);
+			}
+		}
+	}
+
+	&.em5 {
+		&::after {
+			content: "";
+			border-top: 1px solid silver;
+			position: absolute;
+			top: 50%;
+			left: 7.5em;
+			width: calc(100% - 7.5em);
+
+			@media screen and (max-width: $viewport) {
+				left: 7.5em;
+				width: calc(100% - 7.5em);
+			}
+		}
+	}
+
+	&.em6 {
+		&.oubo {
+			width: 700px;
+			margin: 60px auto 30px;
+
+			@media (max-width: $viewport) {
+				width: 100%;
+				margin: 5vw auto 5vw;
+			}
+		}
+
+		&::after {
+			content: "";
+			border-top: 1px solid silver;
+			position: absolute;
+			top: 50%;
+			left: 8.6em;
+			width: calc(100% - 8.6em);
+
+			@media screen and (max-width: $viewport) {
+				left: 8.6em;
+				width: calc(100% - 8.6em);
+			}
+		}
+	}
+
+	&.em7 {
+		&::after {
+			content: "";
+			border-top: 1px solid silver;
+			position: absolute;
+			top: 50%;
+			left: 9.7em;
+			width: calc(100% - 9.7em);
+
+			@media screen and (max-width: $viewport) {
+				left: 9.7em;
+				width: calc(100% - 9.7em);
+			}
+		}
+	}
+
+	&.em8 {
+		&::after {
+			content: "";
+			border-top: 1px solid silver;
+			position: absolute;
+			top: 50%;
+			left: 11em;
+			width: calc(100% - 11em);
+
+			@media screen and (max-width: $viewport) {
+				left: 11em;
+				width: calc(100% - 11em);
+			}
+		}
+	}
+}

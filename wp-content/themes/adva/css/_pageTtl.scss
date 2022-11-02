@@ -1,0 +1,7 @@
+.pageTtl {
+	padding-top: 185px;
+
+	@include sp {
+		padding-top: 31vw;
+	}
+}

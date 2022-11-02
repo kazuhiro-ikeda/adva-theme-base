@@ -1,0 +1,268 @@
+@charset "utf-8";
+/*//////////////////////////////////////////　投稿：ビジュアルエディタ用　//////////////////////////////////////////*/
+
+/* ビジュアルリッチエディタのスタイル 　<div class="single-content"><?php the_content(); ?></div> */
+:root {
+	--main-color: #6B5B40;
+}
+
+.mce-content-body {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+		"Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+	color: #444444;
+
+
+}
+
+.mce-content-body p:nth-of-type(1) {
+	margin: 0 0 30px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 50px 0 24px;
+	padding: 18px 20px;
+	background: var(--main-color);
+	color: #fff;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 50px 0 30px;
+	line-height: 1.5;
+	border-top: 2px solid var(--main-color);
+	border-bottom: 2px solid var(--main-color);
+	padding: 16px 0;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 50px 0 30px;
+	line-height: 1.5;
+	border-bottom: 2px solid var(--main-color);
+	padding: 0 0 0.2px;
+}
+
+h5 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 50px 0 20px;
+	line-height: 1.5;
+}
+
+h6 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 50px 0 20px;
+	line-height: 1.5;
+}
+
+p {
+	font-size: 14px;
+	margin: 30px 0 30px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+p a {
+	text-decoration: underline;
+	color: var(--main-color);
+}
+
+.full {
+	margin: 2em 0;
+}
+
+.wp-caption-text {
+	margin-top: 0;
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	background: #fafafa;
+	position: relative;
+	padding: 40px 30px;
+	margin: 40px 0;
+}
+
+blockquote p {
+	padding: 0;
+	margin: 0;
+	color: #777;
+}
+
+ul,
+ol {
+	margin: 0 0 30px;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+	line-height: 1.6;
+	padding: 0 0 10px 0;
+	position: relative;
+	font-size: 14px;
+}
+
+ul li:before {
+	content: "・";
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 10px;
+	color: var(--main-color);
+}
+
+ul li ul {
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
+ul li ul li {
+	line-height: 1.6;
+	padding: 0 0 10px 20px;
+}
+
+ul li ul li:last-child {
+	padding: 0 0 0 20px;
+}
+
+ol {
+	counter-reset: item;
+	list-style-type: none;
+}
+
+ol li {
+	list-style-type: none;
+	list-style-position: inside;
+	counter-increment: cnt;
+	line-height: 1.6;
+	position: relative;
+	padding: 0 0 0 42px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+ol li:before {
+	position: absolute;
+	left: 0;
+	top: -4px;
+	counter-increment: item;
+	content: counter(item, decimal-leading-zero);
+	width: 35px;
+	height: 35px;
+	font-size: 14px;
+	line-height: 35px;
+	text-align: center;
+	color: white;
+	text-align: center;
+	border-radius: 50%;
+	background: var(--main-color);
+}
+
+hr {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-top: 1px dashed #bbb;
+	margin: 10px 0;
+}
+
+table {
+	margin: 40px 0;
+	border: 1px solid #e6e6e6;
+}
+
+@media (max-width: 750px) {
+	table {
+		margin: 5vw 0;
+	}
+}
+
+table th {
+	background: var(--main-color);
+	color: #fff;
+	font-weight: bold;
+}
+
+table th,
+table td {
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid #e6e6e6;
+	padding: 16px 10px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.alignright {
+	float: right;
+	margin-left: 40px;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 40px;
+}
+
+#image-details-caption {
+	display: none;
+}
+
+.wp-caption {
+	position: relative;
+	width: 100% !important;
+	margin-bottom: 0rem !important;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	width: 48% !important;
+}
+
+.wp-caption.alignleft {
+	margin-left: 40px;
+}
+
+.wp-caption.alignright {
+	margin-right: 40px;
+}
+
+.wp-caption .wp-caption-text {
+	margin-bottom: 0;
+}
+
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto;
+	max-width: 600px;
+}
+
+img[class*="wp-image-"].alignright,
+img[class*="attachment-"].alignright {
+	height: auto;
+	width: 48%;
+}
+
+img[class*="wp-image-"].alignleft,
+img[class*="attachment-"].alignleft {
+	height: auto;
+	width: 48%;
+}

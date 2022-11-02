@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+.nav_drawer {
+	display: none;
+
+	@media (max-width: $viewport) {
+		display: block;
+
+		.inner {
+			position: fixed;
+			width: 100%;
+			height: 16vw;
+			top: 0;
+			left: 0;
+			background: transparent;
+			z-index: 1001;
+		}
+
+		.logo {
+			display: block;
+			margin: 5.5vw 0 0 3vw;
+		}
+	}
+
+	&.fixed {
+		.inner {
+			background: white;
+
+			.logo {
+				color: $cc;
+			}
+		}
+
+		.menu-trigger {
+			&:before {
+				color: #1F6BC8;
+			}
+		}
+
+		.menu-trigger span {
+			background-color: #1F6BC8;
+		}
+	}
+
+	&.active {
+		.inner {
+			background: transparent;
+
+			.logo {
+				color: white;
+			}
+		}
+
+		.menu-trigger {
+			&:before {
+				color: white;
+			}
+		}
+
+		.menu-trigger span {
+			background-color: white;
+		}
+	}
+
+	.drawer_bg {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 999;
+		background-color: transparent;
+		display: none;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+/*+++ Default Navigation CSS +++*/
+
+.nav_drawer {
+	.drawer_nav_wrapper {
+		width: 100vw;
+		height: 100%;
+		transition: all 0.5s;
+		transform: translate(100vw);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 1000;
+		background-color: #304661;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 40vw 18vw 20vw;
+
+		&.open {
+			transform: translate(0);
+		}
+	}
+}
+
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	width: 8vw;
+	height: 5vw;
+	background: none;
+	border: none;
+	appearance: none;
+	cursor: pointer;
+	position: fixed;
+	top: 4vw;
+	right: 5vw;
+	z-index: 1002;
+	outline: none;
+
+	&:before {
+		content: "menu";
+		font-size: 2.8vw;
+		display: block;
+		font-family: $roboto;
+		color: white;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		bottom: -4vw;
+		text-align: center;
+		transition: all 0.4s;
+	}
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0.5vw;
+	background-color: white;
+	border-radius: 1px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 2.3vw;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	transform: translateY(2.3vw) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+	transform: translateY(-2.3vw) rotate(45deg);
+}

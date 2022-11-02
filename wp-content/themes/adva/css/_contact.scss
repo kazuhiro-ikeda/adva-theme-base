@@ -1,0 +1,35 @@
+/*
+---------------------------------------
+contact
+---------------------------------------
+*/
+
+#contact {
+	background: #EDF2F8;
+	padding: 90px 0 120px;
+
+	@include sp {
+		padding: 10vw 0 10vw;
+	}
+
+	.pageTtl {
+		padding-bottom: 143px;
+
+		@include sp {
+			padding-bottom: 17vw;
+		}
+	}
+
+	.ttl_page_form {
+		text-align: center;
+		margin: 0 0 50px;
+		color: #1F6BC8;
+		font-size: 38px;
+		letter-spacing: 3px;
+
+		@media (max-width: $viewport) {
+			font-size: 7vw;
+			margin: 0 0 8vw;
+		}
+	}
+}

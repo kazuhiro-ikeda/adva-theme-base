@@ -1,0 +1,59 @@
+/*
+---------------------------------------
+404
+---------------------------------------
+*/
+.error404 {
+	.text_404 {
+		text-align: center;
+		font-size: 18px;
+		line-height: 1.5;
+
+		@include sp {
+			font-size: 3.8vw;
+		}
+	}
+
+	.btn-404 {
+		text-align: center;
+		margin: 30px auto 120px;
+
+		@include sp {
+			margin: 10vw auto;
+		}
+
+		a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 240px;
+			height: 52px;
+			box-sizing: border-box;
+			padding: 0 10px 0 10px;
+			border: 1px solid #000;
+			background: #e6e6e6;
+			line-height: 1;
+			transition: all 0.5s;
+			font-size: 14px;
+			margin: 0 auto;
+
+			&:after {
+				content: "▶︎";
+				padding: 0 5px 0 0;
+			}
+
+			@include sp {
+				font-size: 3.4vw;
+				width: 60vw;
+				height: 12vw;
+				padding: 0 0 0 3vw;
+			}
+
+			@include pc {
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+}

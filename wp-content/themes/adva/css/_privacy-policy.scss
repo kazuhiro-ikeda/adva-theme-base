@@ -1,0 +1,39 @@
+@charset "utf-8";
+//
+#page_privacy-policy {
+	padding: 120px 0 150px;
+
+	@media (max-width: $viewport) {
+	    padding: 10vw 0 20vw;
+	}
+
+	.inner_sec {
+	    width: 700px;
+	    margin: 0 auto;
+
+	    @media (max-width: $viewport) {
+	        width: 88vw;
+	    }
+	}
+
+	.ttl {
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 10px;
+	}
+
+	p {
+	    font-size: 16px;
+	    line-height: 1.8;
+		margin: 0 0 30px;
+
+	    @media (max-width: $viewport) {
+	        font-size: 3.6vw;
+	    }
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}

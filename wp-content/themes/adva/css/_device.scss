@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*	device
+---------------------------------*/
+
+/* Android bugfix ４系 */
+p {
+	//background-image:url(image);
+}
+h1 , h2 , h3 , h4 , h5 , h6 , th , td {
+	//background-image:url(image);
+}
+
+/* iOS */
+input[type="submit"] {
+   -webkit-appearance: none;
+   border-radius: 0;
+}
